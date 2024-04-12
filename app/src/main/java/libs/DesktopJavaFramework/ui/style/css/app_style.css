@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 23, 2018, 9:15:28 PM
+    Author     : xgao
+*/
+.root{
+    /* 
+        FIRST WE'LL DEFINE OUR SWATCHES, i.e. THE COMPLEMENTARY
+        COLORS THAT WE'LL USE TOGETHER IN MULTIPLE PLACES THAT
+        TOGETHER WILL MAKE UP A GIVEN THEME
+    */
+    
+    /*  THE NEURAL SWATCH IS USED FOR THE BACKGROUNDS IN PLACES WHERE
+        THERE ARE NO OTHER CONTROLS*/
+    SWATCH_NEUTRAL:             #EBC944;
+    /*  THE COMPLEMENT SWATCH IS USED FOR BACKGROUND AREAS OF THINGS
+        LAYERED ON TOP OF THE BACKGROUND */
+    SWATCH_COMPLEMENT:          #FFFF00;
+    /*  THE ACCENT SWATCH IS USED FOR BORDERS OF THINGS LIKE TOOLBAR
+        THAT ARE USED FOR ORGANIZING GROUPS OF COMPONENTS */
+    SWATCH_ACCENT:              #66631b;
+    SWATCH_ACCENT_ALT:          #98954e;
+    /*  THIS BLEND SWATCH IS USED FOR GRADIENT TRANSITIONS */
+    SWATCH_BLEND:                #d2cd5e;
+    
+    GREY:                        #A9A9A9;
+    
+    -fx-font-family: "Roboto";
+}
+
+/* FIRST WE HAVE THE CONTROLS THAT THE DESKTOP JAVA FRAMEWORK USES */
+
+/* THE TOOLBAR RUNNING THE LENGTH OF THE TOP OF THE UI */
+.djf_top_toolbar {
+    -fx-background-color:   SWATCH_NEUTRAL;
+    -fx-border-color:       SWATCH_ACCENT;
+    -fx-border-width:       2;
+    -fx-border-radius:      15;
+}
+/* A TOOLBAR IN THE TOP TOOLBAR LIKELY WITH BUTTONS */
+.djf_toolbar_pane {
+    -fx-background-color:   SWATCH_COMPLEMENT;
+    -fx-border-color:       SWATCH_ACCENT;
+    -fx-border-width:       2;
+    -fx-border-radius:      15;
+    -fx-background-radius: 15;
+}
+/* A BUTTON WITH AN ICON PUT IN A TOP TOOLBAR */
+.djf_icon_button {
+    -fx-background-color:   transparent;
+    -fx-padding:            0;
+}
+.djf_icon_button:hover {
+    -fx-background-color: linear-gradient(SWATCH_COMPLEMENT, SWATCH_BLEND);    
+}
+.djf_welcome_banner {
+    /*-fx-border-color:transparent;*/
+    /*-fx-border-width:10;*/
+}
+
+.djf_welcome_header {
+    -fx-font-size: 32pt;
+    -fx-background-color: transparent;
+}
+
+.djf_welcome_recent_pane {
+    -fx-padding: 20 20 20 20;
+    -fx-background-color:transparent;
+}
+.djf_welcome_recent_button {
+    -fx-font-size: 14pt;
+    -fx-underline: true;
+    -fx-text-fill: SWATCH_ACCENT;
+    -fx-background-color:transparent;
+}
+.djf_welcome_recent_button:hover {
+    -fx-text-fill: SWATCH_ACCENT_ALT;
+}
+.djf_welcome_recent_button:pressed {
+    -fx-text-fill: SWATCH_NEUTRAL;
+}
+.djf_welcome_new_pane {
+    -fx-background-color:transparent;
+}
+.djf_welcome_new_button {
+    -fx-font-size:20pt;
+    -fx-background-color:transparent;
+    -fx-border-width:2px;
+    -fx-border-color:black;
+    -fx-border-radius:15px;
+    -fx-background-radius: 15px;
+    -fx-border-insets: 15px 0 15px 0;
+    -fx-background-insets: 15px 0 15px 0;
+    -fx-cursor: hand;
+}
+.djf_welcome_new_button:hover{
+    -fx-background-color: SWATCH_COMPLEMENT;
+}
+.djf-welcome_new_button:pressed{
+    -fx-background-color: SWATCH_NEUTRAL;
+}
+
+
+
+
+
